@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: careerai-db
+    restart: always
+    environment:
+      POSTGRES_USER: careerai_user
+      POSTGRES_PASSWORD: careerai_password
+      POSTGRES_DB: careerai
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
