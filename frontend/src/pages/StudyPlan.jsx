@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 
-const API_URL = 'http://127.0.0.1:8000';
+import { API_URL } from '../config';
 
 const StudyPlan = () => {
   const { token } = useAuth();

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-const API_URL = 'http://127.0.0.1:8000';
+import { API_URL } from '../config';
 
 const Interviews = () => {
   const { token, user } = useAuth();
